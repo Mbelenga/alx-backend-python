@@ -1,16 +1,19 @@
 #!/usr/bin/env python3
-""" safely_get_value function """
+"""
+Duck Typing annotation
+"""
+from typing import Mapping, Any, TypeVar, Union
 
-from typing import TypeVar, Mapping, Any, Union
 
 T = TypeVar('T')
 
 
 def safely_get_value(dct: Mapping, key: Any,
-                    default: Union[T, None]) -> Union[Any, T]:
-        """
-        Type Annotations with TypeVar
-        """
-        if key in dct:
-            return dct[key]
+                     default: Union[T, None] = None) -> Union[Any, T]:
+    """
+    Safely retrieve a value from a dictionary
+    """
+    if key in dct:
+        return dct[key]
+    else:
         return default
