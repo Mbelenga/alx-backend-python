@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-""" floor function """
+""" floor function"""
 
 
 import math
@@ -8,7 +8,6 @@ import math
 
 def floor(n: float) -> float:
     """
-    A type-annotated function floor which
-    takes a float  as  an argument
+    A  type-annotated function that returns the floor of a float
     """
     return math.floor(n)
