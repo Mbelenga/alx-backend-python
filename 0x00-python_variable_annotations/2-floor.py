@@ -9,6 +9,6 @@ import math
 def floor(n: float) -> float:
     """
     A type-annotated function floor which
-    takes a float n as argument
+    takes a float  as  an argument
     """
     return math.floor(n)
