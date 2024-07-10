@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-""" multiple coroutine """
+""" multiple coroutines """
 import asyncio
 import random
 
@@ -7,12 +7,12 @@ import random
 from typing import List
 
 
-wait_random = __import__('0-basic_async_syntax.py').wait_random
+wait_random = __import__('0-basic_async_syntax').wait_random
 
 
 async def wait_n(n: int, max_delay: int) -> List[float]:
     """
-    function that waits for n random numbers
+    Async routine to spawn wait_random n times with specifies max_delay
     """
     coroutines = []
     for _ in range(n):
