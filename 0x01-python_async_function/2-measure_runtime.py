@@ -6,11 +6,11 @@ import time
 wait_n = __import__('1-concurrent_coroutines.py').wait_n
 
 
-async def measure_time(n: int, max_delay: int) -> list[float]:
+def measure_time(n: int, max_delay: int) -> list[float]:
     """
     measure_time function
     """
     start = time.perf_counter()
-    await asyncio.gather(*[wait_n(n, max_delay) for _ in range(n)]
-    end=time.perf_counter()
+    asyncio.run*(wait_n(n, max_delay))
+    end = time.perf_counter()
     return (end - start) / n
